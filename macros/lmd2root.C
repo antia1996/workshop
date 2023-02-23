@@ -9,13 +9,11 @@ struct EXT_STR_h101_t
 
 void lmd2root(const int runID=490)
 {
-    TStopwatch timer;
-    timer.Start();
-      
     const TString storage = "/lustre/r3b/202104_s515/stitched/ig4000/";
     const TString lmdfile = storage + TString::Format("main%04d_*.lmd", runID);
+    //const TString outstorage = "/lustre/land/your_name/your_directory/";
     const TString outstorage = "/lustre/land/gasparic/workshop/";
-    const TString outFile = outstorage + TString::Format("s515_neuland_mapped_%04dx.root", runID);
+    const TString outFile = outstorage + TString::Format("s515_neuland_mapped_%04d.root", runID);
     const TString ucesbPath = "/u/land/fake_cvmfs/10/jan23/upexps/202104_s515/202104_s515";
     const TString usesbCall = ucesbPath + " --allow-errors --input-buffer=100Mi";
 
@@ -38,11 +36,6 @@ void lmd2root(const int runID=490)
     FairLogger::GetLogger()->SetLogScreenLevel("ERROR");
     run->Run(-1,0);
 
-    timer.Stop();
-    Double_t rtime = timer.RealTime();
-    Double_t ctime = timer.CpuTime();
-    cout << endl << endl;
     cout << "Macro finished succesfully." << endl;
     cout << "Output file is " << outFile << endl;
-    cout << "Real time " << rtime << " s, CPU time " << ctime << " s" << endl << endl;
 }
