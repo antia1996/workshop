@@ -1,8 +1,8 @@
 void anacal2hit(const int RunID=490)
 {
   const TString inFilePattern = "/lustre/land/gasparic/workshop/s515_neuland_mapped_%04d.root";
-  //const TString inFilePattern = "/lustre/land/your_name/your_directory/s515_neuland_mapped_%04d.root";
-  const TString rootFileName = TString::Format("/lustre/land/gasparic/workshop/s515_anacal2hit_%04d.root", RunID);  
+  const TString rootFileName = TString::Format("/lustre/land/gasparic/workshop/s515_anacal2hit_%04d.root", RunID);
+  //const TString rootFileName = TString::Format("/lustre/land/your_name/your_directory/s515_anacal2hit_%04d.root", RunID);
   const TString tcalParFileName = TString::Format("s515_params_tcal_%04d.root", RunID);
   const TString syncParFileName = TString::Format("s515_params_sync_%04d.root", RunID);
   const Int_t nBarsPerPlane = 50; // number of scintillator bars per plane
