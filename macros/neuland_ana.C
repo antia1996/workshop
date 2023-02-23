@@ -5,9 +5,9 @@ void neuland_ana(const int RunID=490)
     const double distanceToTarget = 1522.5;
 
     const TString inFilePattern = "/lustre/land/gasparic/workshop/s515_neuland_mapped_%04d.root";
-    //const TString inFilePattern = "/lustre/land/your_name/your_directory/s515_neuland_mapped_%04d.root";
     const TString rootFileName = TString::Format("/lustre/land/gasparic/workshop/s515_hit_%04d.root", RunID);  
-
+    //const TString rootFileName = TString::Format("/lustre/land/your_name/your_directory/s515_hit_%04d.root", RunID);
+    
     const Int_t nev = -1;
     const Int_t cosmtpat = 0x800; // cosmics trigger
     
